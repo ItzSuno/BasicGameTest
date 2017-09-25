@@ -44,7 +44,16 @@ public class TheRunTest extends SimpleApplication {
                 "Common/MatDefs/Misc/Unshaded.j3md");
         mat2.setColor("Color", ColorRGBA.Red);
         red.setMaterial(mat2);
-
+        
+        /* Create a Orange box. */
+        
+         Box box3 = new Box(1 ,1 , 1);
+         Geometry orange = new Geometry("Box", box3);
+         orange.setLocalTranslation(new Vector3f(1, 5, 1));
+         Material mat3 = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
+         mat3.setColor("Color", ColorRGBA.Orange);
+         orange.setMaterial(mat3);
+         
         /** Create a pivot node at (0,0,0) and attach it to the root node */
         Node pivot = new Node("pivot");
         rootNode.attachChild(pivot); // put this node in the scene
@@ -52,6 +61,7 @@ public class TheRunTest extends SimpleApplication {
         /** Attach the two boxes to the *pivot* node. (And transitively to the root node.) */
         pivot.attachChild(blue);
         pivot.attachChild(red);
+        pivot.attachChild(orange);
         /** Rotate the pivot node: Note that both boxes have rotated! */
         pivot.rotate(.4f,.4f,0f);
     }
