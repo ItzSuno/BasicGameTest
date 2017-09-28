@@ -15,7 +15,7 @@ import com.jme3.scene.shape.Box;
  * @author Harry-3d
  * 
  *  This is just a test file that runs independently of the main project with CTRL + F6
- *  Later we can cuase a code collison in this file and see how Github handles it.
+ *  Later we can cause a code collison in this file and see how Github handles it.
  */
 public class TheRunTest extends SimpleApplication {
 
