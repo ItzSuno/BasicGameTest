@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package mygame;
 
 
@@ -16,6 +12,10 @@ import com.jme3.scene.shape.Box;
 /**
  *
  * @author Suno
+ * @author Harry-3d
+ * 
+ *  This is just a test file that runs independently of the main project with CTRL + F6
+ *  Later we can cuase a code collison in this file and see how Github handles it.
  */
 public class TheRunTest extends SimpleApplication {
 
