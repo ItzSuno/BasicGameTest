@@ -17,11 +17,11 @@ public class LoadScene {
         assetManager = assMgr;  
     }
      
-    public void loadOurScene(Node node){
+    public Spatial loadOurScene(){
         
         Spatial sceneModel = assetManager.loadModel("Scenes/Scene1.j3o");
         //sceneModel.setLocalScale(.25f);
-        node.attachChild(sceneModel);
+        return sceneModel;
         
     }
     
