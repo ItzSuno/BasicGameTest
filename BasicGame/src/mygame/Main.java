@@ -21,7 +21,8 @@ public class Main extends SimpleApplication {
 
     @Override
     public void simpleInitApp() {
-
+        LoadScene map = new LoadScene(assetManager);
+        map.loadOurScene(rootNode);
     }
 
     @Override
