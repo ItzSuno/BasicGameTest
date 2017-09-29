@@ -62,6 +62,8 @@ public class CameraController extends SimpleApplication implements AnalogListene
 
   public void simpleInitApp() {
     // Load a teapot model
+    //just adding some changes to make sure propeties
+    //is being ignored
     teaGeom = (Geometry) assetManager.loadModel("Models/Male.OBJ");
     Material mat_tea = new Material(assetManager, "Common/MatDefs/Misc/ShowNormals.j3md");
     teaGeom.setMaterial(mat_tea);
