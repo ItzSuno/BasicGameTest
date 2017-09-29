@@ -22,6 +22,8 @@ public class LoadScene {
         assetManager = assMgr;  
     }
      
+    Geometry boxGeo;
+            
     public Spatial loadOurScene(Node rootNode){
         
         Spatial sceneModel = assetManager.loadModel("Scenes/Scene1.j3o");
@@ -29,22 +31,20 @@ public class LoadScene {
          rootNode.attachChild(sceneModel);
          RigidBodyControl floor = new RigidBodyControl(0f);
          sceneModel.addControl(floor);
-        return sceneModel;
-        
+        return sceneModel;     
     }
     
-    public RigidBodyControl makeBox(Node rootNode){
+    public RigidBodyControl makeBox(Node rootNode, String dataName, int data){
          Box box = new Box(1f, 1f, 1f);
-         Geometry boxGeo = new Geometry("box", box);
+         /*Geometry*/ boxGeo = new Geometry("box", box);
          Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
          mat.setColor("Color", ColorRGBA.randomColor());
          boxGeo.setMaterial(mat);
          rootNode.attachChild(boxGeo);
         boxGeo.setLocalTranslation(1f, 20f, 10f);
         RigidBodyControl boxRigid = new RigidBodyControl(2f);
+        boxGeo.setUserData(dataName, data);
         boxGeo.addControl(boxRigid);
-        return boxRigid;
-    }
-    
-    
+        return boxRigid;  
+    }   
 }
